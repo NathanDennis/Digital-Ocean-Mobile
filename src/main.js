@@ -12,23 +12,9 @@ Vue.use(Ionic);
 import { IonicVueRouter } from "@ionic/vue"
 Vue.use(IonicVueRouter)
 
-// ROUTES
-import dashboardRoutes from './routes/dashboardRoutes'
-import accountRoutes from './routes/accountRoutes'
-import billingRoutes from './routes/billingRoutes'
-import dropletRoutes from './routes/dropletsRoutes'
-import monitoringRoutes from './routes/monitoringRoutes'
-import supportRoutes from './routes/supportRoutes'
-
+import allRoutes from './routes/allRoutes'
 const router = new IonicVueRouter({
-    routes: [
-        ...dashboardRoutes, 
-        ...accountRoutes,
-        ...billingRoutes,
-        ...dropletRoutes,
-        ...monitoringRoutes,
-        ...supportRoutes,
-    ]
+    routes: allRoutes
 })
 
 new Vue({
