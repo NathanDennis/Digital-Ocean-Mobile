@@ -2,11 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Home</ion-title>
+        <ion-title>ACCOUNT</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content padding>
-        <h1> Dashboard </h1>
+        <h1> ACCOUNT </h1>
     </ion-content>
   </ion-page>
 </template>
@@ -20,7 +20,7 @@ addIcons({
   "md-add": add.md
 });
 export default {
-  name: "DashBoard",
+  name: "replace-this",
   props: {
     msg: String
   },
