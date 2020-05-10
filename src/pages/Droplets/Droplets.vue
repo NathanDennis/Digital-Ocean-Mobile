@@ -7,13 +7,16 @@
     </ion-header>
     <ion-content padding>
         <h1> DROPLETS </h1>
+        <DashboardGrid 
+            :cards=this.cards 
+        />
         <button href="https://www.google.com">Logs</button>
     </ion-content>
   </ion-page>
 </template>
 
 <script>
-
+import DashboardGrid from '../../components/DashboardGrid'
 import { add } from "ionicons/icons";
 import { addIcons } from "ionicons";
 addIcons({
@@ -25,9 +28,27 @@ export default {
   props: {
     msg: String
   },
+  components: {
+      DashboardGrid
+  },
   data() {
       return {
-        
+          cards: [
+            {
+                id: 1,
+                cardTitle: 'Droplet List',
+                cardHeader: 'Droplet List Tab',
+                cardDescription: 'Show / Manage all droplets',
+                destination: '/#/droplets/list'
+            },
+            {
+                id: 2,
+                cardTitle: 'Logs',
+                cardHeader: 'Logs Tab',
+                cardDescription: 'Show logs',
+                destination: '/#/droplets/logs'
+            }
+          ]
       }
   }
 };

@@ -4,17 +4,17 @@ import TeamManagement from '../pages/Account/TeamManagement'
 
 let accountRoutes = [
     {
-        path: '/profile',
+        path: '/account/profile',
         name: 'profile',
         component: Profile
     },
     {
-        path: '/security',
+        path: '/account/security',
         name: 'security',
         component: Security
     },
     {
-        path: '/teams',
+        path: '/account/teams',
         name: 'teams',
         component: TeamManagement
     },

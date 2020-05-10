@@ -2,11 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Top-nav</ion-title>
+        <ion-title>Profile</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content padding>
-        <h1> Page title </h1>
+        <h1> PROFILE </h1>
     </ion-content>
   </ion-page>
 </template>

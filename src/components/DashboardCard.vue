@@ -15,3 +15,10 @@ export default {
     props: ['cardImage', 'title', 'header', 'description', 'destination']
 }
 </script>
+
+<style scoped>
+    ion-card {
+        height: fit-content;
+        width: fit-content;
+    }
+</style>

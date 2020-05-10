@@ -2,11 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Monitoring: Create Alert</ion-title>
+        <ion-title>Droplets: List</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content padding>
-        <h1> CREATE ALERT </h1>
+        <h1> Droplet List </h1>
     </ion-content>
   </ion-page>
 </template>

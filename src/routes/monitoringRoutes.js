@@ -3,12 +3,12 @@ import CreateAlert from '../pages/Monitoring/CreateAlert'
 
 const monitoringRoutes = [
     {
-        path: '/alertpolicies',
+        path: '/monitoring/alertpolicies',
         name: 'alertPolicies',
         component: AlertPolicies
     },
     {
-        path: '/createalert',
+        path: '/monitoring/createalert',
         name: 'createAlert',
         component: CreateAlert
     }

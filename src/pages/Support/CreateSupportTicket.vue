@@ -2,11 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Top-nav</ion-title>
+        <ion-title>Support: Create Ticket</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content padding>
-        <h1> Page title </h1>
+        <h1> CREATE SUPPORT TICKET </h1>
     </ion-content>
   </ion-page>
 </template>

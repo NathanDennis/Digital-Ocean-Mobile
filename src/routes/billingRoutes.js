@@ -3,12 +3,12 @@ import BillingStatus from '../pages/Billing/BillingStatus'
 
 const billingRoutes = [
     {
-        path: '/billinghistory',
+        path: '/billing/history',
         name: 'billingHistory',
         component: BillingHistory
     },
     {
-        path: '/billingstatus',
+        path: '/billing/status',
         name: 'billingStatus',
         component: BillingStatus
     }
