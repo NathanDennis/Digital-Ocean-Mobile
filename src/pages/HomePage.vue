@@ -36,10 +36,10 @@ export default {
   },
 //   mounted() {
 //       axios
-//         .get("https://api.digitalocean.com/v2/account", {headers: { 'Authorization': `Bearer ${this.APIKey}`}})
+//         .get("https://api.digitalocean.com/v2/customers/my/balance", {headers: { 'Authorization': `Bearer ${this.APIKey}`}})
 //         .then(response => {
-//             this.accountName = response.data.account.email
-//             console.log(response.data.account)
+//             // 
+//             console.log(response)
 //         })
 //         .catch(error => {
 //             console.log(error)

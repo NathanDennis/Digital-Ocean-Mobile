@@ -5,8 +5,7 @@
             <ion-card-content>
                 <p>{{description}}</p>
             </ion-card-content>
-        </ion-card>
-    
+        </ion-card>    
 </template>
 
 <script>

@@ -7,6 +7,11 @@
     </ion-header>
     <ion-content padding>
         <h1> Droplet List </h1>
+        <ion-list>
+            <DropletListItem
+                dropletName="Test Droplet"
+            />
+        </ion-list>
     </ion-content>
   </ion-page>
 </template>
@@ -15,6 +20,8 @@
 
 import { add } from "ionicons/icons";
 import { addIcons } from "ionicons";
+
+import DropletListItem from '../../components/DropletListItem'
 addIcons({
   "ios-add": add.ios,
   "md-add": add.md
@@ -24,12 +31,10 @@ export default {
   props: {
     msg: String
   },
-  data() {
-      return {
-        
-      }
+  components: {
+      DropletListItem
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

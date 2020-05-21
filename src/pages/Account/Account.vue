@@ -10,6 +10,14 @@
         <DashboardGrid 
             :cards=this.cards
         />
+        <h3>Account Details</h3>
+        <div>
+            <p>Email: {{accountDetails.email}}</p>
+            <p>Email verified: {{accountDetails.emailVerified}}</p>
+            <p>Droplet limit: {{accountDetails.dropletLimit}}</p>
+            <p>Account status: {{accountDetails.status}}</p>
+        </div>
+
     </ion-content>
   </ion-page>
 </template>
@@ -55,7 +63,14 @@ export default {
                   cardDescription: 'Team Management',
                   destination: '/#/account/teams'
                 },
-          ]
+          ],
+          accountDetails: {
+              email: 'negatronbear@gmail.com',
+              emailVerified: true,
+              dropletLimit: 10,
+              status: 'active'
+
+          }
       }
   }
 };
