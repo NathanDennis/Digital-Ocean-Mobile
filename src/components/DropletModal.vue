@@ -10,7 +10,7 @@
       <ion-list class="ion-padding">
         <ion-item>ID: {{dropletID}}</ion-item>
         <ion-item>Status: {{status}}</ion-item>
-        <ion-item>Slug: {{slug}}</ion-item>
+        <ion-item>Image: {{image}}</ion-item>
         <ion-item>Region: {{regionName}}</ion-item>
       </ion-list>
     </ion-content>
@@ -22,9 +22,9 @@ export default {
   name: "Modal",
   props: {
       dropletName: { type: String, default: 'Droplet Name'},
-      dropletID: { type: String, default: 'Droplet ID'},
+      dropletID: { type: Number || String, default: null},
       status: { type: String, default: 'Droplet Status'},
-      slug: { type: String, default: 'Droplet Slug'},
+      image: { type: String, default: 'Droplet Image Slug'},
       regionName: { type: String, default: 'Droplet Region'}
   },
   methods: {

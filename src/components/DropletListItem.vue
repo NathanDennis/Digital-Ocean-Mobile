@@ -15,7 +15,7 @@ import DropletModal from '../components/DropletModal'
 
 export default {
     name: "DropletListItem",
-    props: ["dropletName", "dropletID", "status", "slug", "regionName"],
+    props: ["dropletName", "dropletID", "status", "image", "regionName"],
     methods: {
         openModal() {
             return this.$ionic.modalController
@@ -26,7 +26,7 @@ export default {
                             dropletName: this.dropletName,
                             status: this.status,
                             dropletID: this.dropletID,
-                            slug: this.slug,
+                            image: this.image,
                             regionName: this.regionName
                         }
                     }
