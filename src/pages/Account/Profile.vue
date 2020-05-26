@@ -1,33 +1,51 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar color="primary">
+      <ion-toolbar color="primary">  
         <ion-title>Profile</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content padding>
         <h1> PROFILE </h1>
+        <h3>Account Details</h3>
+        <ion-grid>
+            <div v-if="account.email">
+                <p>Email: {{account.email}}</p>
+                <p>Email verified: {{account.email_verified}}</p>
+                <p>Droplet limit: {{account.droplet_limit}}</p>
+                <p>Account status: {{account.status}}</p>
+            </div>
+            <div v-else>
+                <h1>NO ACCOUNT DETAILS</h1>
+            </div>
+        </ion-grid>
     </ion-content>
   </ion-page>
 </template>
 
 <script>
+import axios from 'axios'
 
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
 export default {
-  name: "replace-this",
+  name: "profile",
   props: {
     msg: String
   },
   data() {
       return {
-        
+          account: {}
       }
+  },
+  mounted() {
+      axios
+        .get("http://localhost:3000/account")
+        .then(response => {
+            this.account = response.data
+            console.log(response)
+        })
+        .catch(error => {
+            console.log(error)
+        })
   }
 };
 </script>

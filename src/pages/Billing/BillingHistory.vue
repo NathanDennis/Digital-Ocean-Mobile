@@ -7,29 +7,50 @@
     </ion-header>
     <ion-content padding>
         <h1> BILLING HISTORY </h1>
+        <BillingHistoryListItem 
+            v-for="bill in billingHistory"
+            :key=bill.date
+            :description=bill.description
+            :amount=bill.amount
+            :type=bill.type
+            :date=bill.date
+            :invoice_id=bill.invoice_id
+            :invoice_uuid=bill.invoice_uuid            
+        />
+
     </ion-content>
   </ion-page>
 </template>
 
 <script>
+import axios from 'axios'
+import BillingHistoryListItem from '../../components/billing/BillingHistoryListItem'
 
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
+
 export default {
   name: "replace-this",
   props: {
     msg: String
   },
+  components: {
+      BillingHistoryListItem
+  },
   data() {
       return {
-        
+          billingHistory: []
       }
+  },
+  mounted(){
+      axios
+        .get("http://localhost:3000/billinghistory")
+        .then(response => {
+            this.billingHistory = response.data.billing_history
+        })
+        .catch(error => {
+            console.log(error)
+        })
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

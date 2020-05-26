@@ -1,17 +1,11 @@
 <template>
-    <ion-item 
-
-
-    >
+    <ion-item>
         <ion-button @click="openModal">{{dropletName}}</ion-button>
-
-        <ion-button>Reboot</ion-button>
-
     </ion-item>
 </template>
 
 <script>
-import DropletModal from '../components/DropletModal'
+import DropletModal from './DropletModal'
 
 export default {
     name: "DropletListItem",
