@@ -38,7 +38,7 @@ export default {
   },
   mounted() {
       axios
-        .get("http://localhost:3000/account")
+        .get("http://localhost:3000/account/profile")
         .then(response => {
             this.account = response.data
             console.log(response)
@@ -47,7 +47,7 @@ export default {
             console.log(error)
         })
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

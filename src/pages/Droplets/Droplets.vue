@@ -10,26 +10,23 @@
         <DashboardGrid 
             :cards=this.cards 
         />
-        <button href="https://www.google.com">Logs</button>
+        <BottomNav />
     </ion-content>
   </ion-page>
 </template>
 
 <script>
 import DashboardGrid from '../../components/DashboardGrid'
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
+import BottomNav from '../../components/BottomNav'
+
 export default {
-  name: "replace-this",
+  name: "Droplets",
   props: {
     msg: String
   },
   components: {
-      DashboardGrid
+      DashboardGrid,
+      BottomNav
   },
   data() {
       return {
@@ -56,4 +53,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>

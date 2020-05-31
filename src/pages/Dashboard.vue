@@ -24,7 +24,7 @@ addIcons({
   "md-add": add.md
 });
 export default {
-  name: "replace-this",
+  name: "Dashboard",
   props: {
     msg: String
   },

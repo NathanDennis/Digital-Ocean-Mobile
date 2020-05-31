@@ -20,6 +20,7 @@
                     :regionName=droplet.region.name
                 />
             </ion-list>
+            <BottomNav />
         </ion-content>
     </ion-page>
 </template>
@@ -27,6 +28,7 @@
 <script>
 import axios from 'axios'
 import DropletListItem from '../../components/droplets/DropletListItem'
+import BottomNav from '../../components/BottomNav'
 
 export default {
     name: "dropletList",
@@ -34,7 +36,8 @@ export default {
         msg: String
     },
     components: {
-        DropletListItem
+        DropletListItem,
+        BottomNav
     },
     data() {
           return {
@@ -43,7 +46,7 @@ export default {
     },
   mounted() {
       axios
-        .get("http://localhost:3000/listdroplets")
+        .get("http://localhost:3000/droplets/listdroplets")
         .then(response => {
             this.dropletList = response.data            
         })

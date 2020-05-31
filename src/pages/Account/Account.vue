@@ -10,12 +10,22 @@
         <DashboardGrid 
             :cards=this.cards
         />
+        <ion-list>
+            <ion-item>Account balance: {{balance.account_balance}}</ion-item>
+            <ion-item>Month to date usage: {{balance.month_to_date_usage}}</ion-item>
+            <ion-item>Month to date balance: {{balance.month_to_date_balance}}</ion-item>
+            <ion-item>Generated at: {{new Date(balance.generated_at).toLocaleDateString()}}</ion-item>
+        </ion-list>
+
+        <BottomNav />
     </ion-content>
   </ion-page>
 </template>
 
 <script>
 import DashboardGrid from '../../components/DashboardGrid'
+import BottomNav from '../../components/BottomNav'
+import axios from 'axios'
 
 export default {
   name: "account",
@@ -23,7 +33,8 @@ export default {
     msg: String
   },
   components: {
-      DashboardGrid
+      DashboardGrid,
+      BottomNav
   },
   data() {
       return {
@@ -50,7 +61,18 @@ export default {
                   destination: '/#/account/teams'
                 },
           ],
+          balance: {}
       }
+  },
+  mounted() {
+      axios
+        .get("http://localhost:3000/billing/balance")
+        .then(response => {
+            this.balance = response.data
+        })
+        .catch(error => {
+            console.log(error)
+        })
   }
 }
 </script>

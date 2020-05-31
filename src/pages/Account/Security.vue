@@ -20,7 +20,7 @@ addIcons({
   "md-add": add.md
 });
 export default {
-  name: "replace-this",
+  name: "Security",
   props: {
     msg: String
   },

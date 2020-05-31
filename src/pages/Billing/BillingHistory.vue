@@ -42,7 +42,7 @@ export default {
   },
   mounted(){
       axios
-        .get("http://localhost:3000/billinghistory")
+        .get("http://localhost:3000/billing/history")
         .then(response => {
             this.billingHistory = response.data.billing_history
         })
