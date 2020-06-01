@@ -14,26 +14,15 @@
 
 <script>
 import DashboardCard from "./DashboardCard";
-
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
 export default {
   name: "DashboardGrid",
   props: {
-    msg: String,
     cards: Array
   },
   components: {
     DashboardCard
-  },
-  data() {
-    return {};
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -42,7 +31,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     height: fit-content;
-    /* border: dotted blue 2px; */
     justify-content: center;
 }
 

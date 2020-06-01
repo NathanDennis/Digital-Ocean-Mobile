@@ -20,17 +20,17 @@
             </div>
         </ion-grid>
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import axios from 'axios'
+import BottomNav from '../../components/BottomNav'
 
 export default {
-  name: "profile",
-  props: {
-    msg: String
-  },
+  name: "Profile",
+  components: { BottomNav },
   data() {
       return {
           account: {}
@@ -41,7 +41,6 @@ export default {
         .get("http://localhost:3000/account/profile")
         .then(response => {
             this.account = response.data
-            console.log(response)
         })
         .catch(error => {
             console.log(error)

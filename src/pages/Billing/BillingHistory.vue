@@ -17,23 +17,21 @@
             :invoice_id=bill.invoice_id
             :invoice_uuid=bill.invoice_uuid            
         />
-
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import axios from 'axios'
 import BillingHistoryListItem from '../../components/billing/BillingHistoryListItem'
-
+import BottomNav from '../../components/BottomNav'
 
 export default {
-  name: "replace-this",
-  props: {
-    msg: String
-  },
+  name: "BillingHistory",
   components: {
-      BillingHistoryListItem
+      BillingHistoryListItem,
+      BottomNav
   },
   data() {
       return {

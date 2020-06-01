@@ -10,15 +10,16 @@
         <ion-button href="#">Log In</ion-button>
         <ion-button href="/#/dashboard">Dashboard</ion-button>
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
 <script>
+import BottomNav from '../components/BottomNav'
+
 export default {
   name: "HomePage",
-  props: {
-    msg: String
-  },
+  components: { BottomNav },
   data() {
       return {
         APIKey: process.env.VUE_APP_DO_API_KEY,

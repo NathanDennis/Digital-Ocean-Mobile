@@ -16,30 +16,22 @@
         </div>
         <ion-button :href=buttonDestination>Create New Ticket</ion-button>
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
 <script>
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
+import BottomNav from '../../components/BottomNav'
+
 export default {
-  name: "replace-this",
-  props: {
-    msg: String
-  },
-  components: {
-      
-  },
-  data() {
-      return {
-          buttonDestination: '/#/support/createticket'
-      }
-  }
-};
+    name: "Tickets",
+    components: { BottomNav },
+    data() {
+        return {
+            buttonDestination: '/#/support/createticket'
+        }
+    }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

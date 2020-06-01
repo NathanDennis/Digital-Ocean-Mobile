@@ -11,24 +11,19 @@
             :cards=this.cards
         />
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import DashboardGrid from '../../components/DashboardGrid'
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
+import BottomNav from '../../components/BottomNav'
+
 export default {
-  name: "replace-this",
-  props: {
-    msg: String
-  },
+  name: "Support",
   components: {
-      DashboardGrid
+      DashboardGrid,
+      BottomNav
   },
   data() {
       return {
@@ -57,7 +52,7 @@ export default {
           ]
       }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

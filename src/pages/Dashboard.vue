@@ -11,25 +11,19 @@
             :cards=this.cards
         />
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import DashboardGrid from '../components/DashboardGrid'
+import BottomNav from '../components/BottomNav'
 
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
 export default {
   name: "Dashboard",
-  props: {
-    msg: String
-  },
   components: {
-      DashboardGrid
+      DashboardGrid,
+      BottomNav
   },
   data() {
       return {

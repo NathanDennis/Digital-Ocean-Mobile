@@ -8,28 +8,21 @@
     <ion-content padding>
         <h1> TEAM MANAGEMENT </h1>
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
 <script>
+import BottomNav from '../../components/BottomNav'
 
-import { add } from "ionicons/icons";
-import { addIcons } from "ionicons";
-addIcons({
-  "ios-add": add.ios,
-  "md-add": add.md
-});
 export default {
-  name: "replace-this",
-  props: {
-    msg: String
-  },
-  data() {
-      return {
-        
-      }
+  name: "TeamManagement",
+    components: { BottomNav },
+    data() {
+        return {
+    }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

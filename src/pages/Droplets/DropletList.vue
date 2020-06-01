@@ -20,8 +20,8 @@
                     :regionName=droplet.region.name
                 />
             </ion-list>
-            <BottomNav />
         </ion-content>
+        <BottomNav />
     </ion-page>
 </template>
 
@@ -31,10 +31,7 @@ import DropletListItem from '../../components/droplets/DropletListItem'
 import BottomNav from '../../components/BottomNav'
 
 export default {
-    name: "dropletList",
-    props: {
-        msg: String
-    },
+    name: "DropletList",
     components: {
         DropletListItem,
         BottomNav

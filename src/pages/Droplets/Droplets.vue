@@ -10,8 +10,8 @@
         <DashboardGrid 
             :cards=this.cards 
         />
-        <BottomNav />
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
@@ -21,9 +21,6 @@ import BottomNav from '../../components/BottomNav'
 
 export default {
   name: "Droplets",
-  props: {
-    msg: String
-  },
   components: {
       DashboardGrid,
       BottomNav
@@ -48,7 +45,7 @@ export default {
           ]
       }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

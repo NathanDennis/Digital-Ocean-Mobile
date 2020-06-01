@@ -16,9 +16,8 @@
             <ion-item>Month to date balance: {{balance.month_to_date_balance}}</ion-item>
             <ion-item>Generated at: {{new Date(balance.generated_at).toLocaleDateString()}}</ion-item>
         </ion-list>
-
-        <BottomNav />
     </ion-content>
+    <BottomNav />
   </ion-page>
 </template>
 
@@ -28,10 +27,7 @@ import BottomNav from '../../components/BottomNav'
 import axios from 'axios'
 
 export default {
-  name: "account",
-  props: {
-    msg: String
-  },
+  name: "Account",
   components: {
       DashboardGrid,
       BottomNav
