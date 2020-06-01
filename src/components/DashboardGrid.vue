@@ -32,6 +32,7 @@ export default {
     flex-wrap: wrap;
     height: fit-content;
     justify-content: center;
+    margin-bottom: 3.5rem;
 }
 
 .dashboard-card {
