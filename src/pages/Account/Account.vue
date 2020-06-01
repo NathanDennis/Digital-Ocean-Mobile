@@ -62,7 +62,7 @@ export default {
   },
   mounted() {
       axios
-        .get("http://localhost:3000/billing/balance")
+        .get(`${process.env.VUE_APP_LOCAL_DEV_SERVER_IP}/billing/balance`)
         .then(response => {
             this.balance = response.data
         })

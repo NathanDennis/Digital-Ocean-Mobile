@@ -38,7 +38,7 @@ export default {
   },
   mounted() {
       axios
-        .get("http://localhost:3000/account/profile")
+        .get(`${process.env.VUE_APP_LOCAL_DEV_SERVER_IP}/account/profile`)
         .then(response => {
             this.account = response.data
         })

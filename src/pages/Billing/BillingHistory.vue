@@ -40,7 +40,7 @@ export default {
   },
   mounted(){
       axios
-        .get("http://localhost:3000/billing/history")
+        .get(`${process.env.VUE_APP_LOCAL_DEV_SERVER_IP}/billing/history`)
         .then(response => {
             this.billingHistory = response.data.billing_history
         })

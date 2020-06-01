@@ -43,7 +43,7 @@ export default {
     },
   mounted() {
       axios
-        .get("http://localhost:3000/droplets/listdroplets")
+        .get(`${process.env.VUE_APP_LOCAL_DEV_SERVER_IP}/droplets/listdroplets`)
         .then(response => {
             this.dropletList = response.data            
         })

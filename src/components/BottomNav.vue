@@ -25,4 +25,7 @@ export default {
 </script>
 
 <style scoped>
+ion-tab-bar {
+    box-shadow: 0 -0.02em 0.25em;
+}
 </style>
