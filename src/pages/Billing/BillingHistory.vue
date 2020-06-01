@@ -18,20 +18,17 @@
             :invoice_uuid=bill.invoice_uuid            
         />
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import axios from 'axios'
 import BillingHistoryListItem from '../../components/billing/BillingHistoryListItem'
-import BottomNav from '../../components/BottomNav'
 
 export default {
   name: "BillingHistory",
   components: {
-      BillingHistoryListItem,
-      BottomNav
+      BillingHistoryListItem
   },
   data() {
       return {

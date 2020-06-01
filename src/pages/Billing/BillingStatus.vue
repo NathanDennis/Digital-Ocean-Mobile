@@ -8,16 +8,12 @@
     <ion-content padding>
         <h1> BILLING STATUS </h1>
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
-import BottomNav from '../../components/BottomNav'
-
 export default {
     name: "BillingStatus",
-    components: { BottomNav },
     data() {
         return {
         

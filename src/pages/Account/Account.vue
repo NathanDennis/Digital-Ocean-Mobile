@@ -17,20 +17,17 @@
             <ion-item>Generated at: {{new Date(balance.generated_at).toLocaleDateString()}}</ion-item>
         </ion-list>
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import DashboardGrid from '../../components/DashboardGrid'
-import BottomNav from '../../components/BottomNav'
 import axios from 'axios'
 
 export default {
   name: "Account",
   components: {
-      DashboardGrid,
-      BottomNav
+      DashboardGrid
   },
   data() {
       return {

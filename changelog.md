@@ -5,6 +5,7 @@
 - Added BottomNav component for each page to quickly get back to the dashboard
 - Added IonIcons successfully to BottomNav component
 - Added local Go server IP to environment variables & updated axios calls for mobile testing
+- Removed BottomNav from every component, added BottomNav to App.vue for persistence
 ```
 
 ## 31/5/2020

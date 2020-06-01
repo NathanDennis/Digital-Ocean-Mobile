@@ -8,16 +8,12 @@
     <ion-content padding>
         <h1> INDIVIDUAL DROPLET STATUS </h1>
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
-import BottomNav from '../../components/BottomNav'
-
 export default {
   name: "DropletStatus",
-  components: { BottomNav },
   data() {
         return {
         

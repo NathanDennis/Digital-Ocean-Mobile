@@ -21,20 +21,17 @@
                 />
             </ion-list>
         </ion-content>
-        <BottomNav />
     </ion-page>
 </template>
 
 <script>
 import axios from 'axios'
 import DropletListItem from '../../components/droplets/DropletListItem'
-import BottomNav from '../../components/BottomNav'
 
 export default {
     name: "DropletList",
     components: {
         DropletListItem,
-        BottomNav
     },
     data() {
           return {
@@ -45,9 +42,10 @@ export default {
       axios
         .get(`${process.env.VUE_APP_LOCAL_DEV_SERVER_IP}/droplets/listdroplets`)
         .then(response => {
-            this.dropletList = response.data            
+            this.dropletList = response.data      
+            console.log("Droplet list below")
+            console.log(this.dropletList)   
         })
-        .then(console.log(this.dropletList))
         .catch(error => {
             console.log(error)
         })

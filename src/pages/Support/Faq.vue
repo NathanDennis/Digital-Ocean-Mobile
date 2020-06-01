@@ -8,15 +8,12 @@
     <ion-content padding>
         <h1> FAQs </h1>
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
-import BottomNav from '../../components/BottomNav'
 export default {
-    name: "Faq",
-    components: { BottomNav }
+    name: "Faq"
 }
 </script>
 

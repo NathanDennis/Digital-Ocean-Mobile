@@ -8,15 +8,12 @@
     <ion-content padding>
         <h1> ALERT POLICIES </h1>
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
-import BottomNav from '../../components/BottomNav'
 export default {
-    name: "AlertPolicies",
-    components: { BottomNav }
+    name: "AlertPolicies"
 }
 </script>
 

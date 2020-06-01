@@ -16,16 +16,13 @@
         </div>
         <ion-button :href=buttonDestination>Create New Ticket</ion-button>
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
-import BottomNav from '../../components/BottomNav'
 
 export default {
     name: "Tickets",
-    components: { BottomNav },
     data() {
         return {
             buttonDestination: '/#/support/createticket'

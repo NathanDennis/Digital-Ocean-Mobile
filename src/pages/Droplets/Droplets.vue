@@ -11,19 +11,16 @@
             :cards=this.cards 
         />
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import DashboardGrid from '../../components/DashboardGrid'
-import BottomNav from '../../components/BottomNav'
 
 export default {
   name: "Droplets",
   components: {
       DashboardGrid,
-      BottomNav
   },
   data() {
       return {

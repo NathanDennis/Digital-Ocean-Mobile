@@ -20,17 +20,14 @@
             </div>
         </ion-grid>
     </ion-content>
-    <BottomNav />
   </ion-page>
 </template>
 
 <script>
 import axios from 'axios'
-import BottomNav from '../../components/BottomNav'
 
 export default {
   name: "Profile",
-  components: { BottomNav },
   data() {
       return {
           account: {}
