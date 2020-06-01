@@ -4,6 +4,7 @@
 - Removed unnecessary 'props' and 'data' fields in export default for each component and page
 - Added BottomNav component for each page to quickly get back to the dashboard
 - Added IonIcons successfully to BottomNav component
+- Added local Go server IP to environment variables & updated axios calls for mobile testing
 ```
 
 ## 31/5/2020
