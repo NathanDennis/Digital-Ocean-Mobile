@@ -1,10 +1,7 @@
 import HomePage from '../pages/HomePage'
 import Account from '../pages/Account/Account'
 import Droplets from '../pages/Droplets/Droplets'
-import Monitoring from '../pages/Monitoring/Monitoring'
 import Billing from '../pages/Billing/Billing'
-import Notifications from '../pages/Notifications'
-import Support from '../pages/Support/Support'
 import Dashboard from '../pages/Dashboard'
 
 let dashboardRoutes = [
@@ -29,24 +26,9 @@ let dashboardRoutes = [
         component: Droplets
     },
     {
-        path: '/monitoring',
-        name: 'monitoring',
-        component: Monitoring
-    },
-    {
         path: '/billing',
         name: 'billing',
         component: Billing
-    },
-    {
-        path: '/support',
-        name: 'support',
-        component: Support
-    },
-    {
-        path: '/notifications',
-        name: 'notifications',
-        component: Notifications
     },
 ]
 

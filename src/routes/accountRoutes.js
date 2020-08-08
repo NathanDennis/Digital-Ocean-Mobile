@@ -1,22 +1,16 @@
 import Profile from '../pages/Account/Profile'
-import Security from '../pages/Account/Security'
-import TeamManagement from '../pages/Account/TeamManagement'
+import Account from '../pages/Account/Account'
 
 let accountRoutes = [
+    {
+        path: '/account',
+        name: 'Account',
+        component: Account
+    },
     {
         path: '/account/profile',
         name: 'profile',
         component: Profile
-    },
-    {
-        path: '/account/security',
-        name: 'security',
-        component: Security
-    },
-    {
-        path: '/account/teams',
-        name: 'teams',
-        component: TeamManagement
     },
 ]
 

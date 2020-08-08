@@ -31,14 +31,7 @@ export default {
                 cardHeader: 'Billing History Tab',
                 cardDescription: 'Billing History',
                 destination: '/#/billing/history'
-            },
-            {
-                id: 2,
-                cardTitle: 'Status',
-                cardHeader: 'Billing Status Tab',
-                cardDescription: 'Current Billing Status',
-                destination: '/#/billing/status'
-            },
+            }
         ]
       }
   }

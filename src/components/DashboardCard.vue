@@ -1,23 +1,15 @@
 <template>
-        <ion-card v-bind:href="destination">
-            <ion-card-header>{{header}}</ion-card-header>
+        <ion-card class="ui card" v-bind:href="destination">
             <ion-card-title>{{title}}</ion-card-title>
-            <ion-card-content>
-                <p>{{description}}</p>
+            <ion-card-content class="meta">
+                {{description}}
             </ion-card-content>
-        </ion-card>    
+        </ion-card>
 </template>
 
 <script>
 export default {
     name: 'DashboardCard',
-    props: ['cardImage', 'title', 'header', 'description', 'destination']
+    props: ['cardImage', 'title', 'description', 'destination']
 }
 </script>
-
-<style scoped>
-    ion-card {
-        height: fit-content;
-        width: fit-content;
-    }
-</style>

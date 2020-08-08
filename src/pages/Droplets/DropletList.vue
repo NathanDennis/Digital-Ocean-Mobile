@@ -40,11 +40,11 @@ export default {
     },
   mounted() {
       axios
-        .get(`${process.env.VUE_APP_LOCAL_DEV_SERVER_IP}/droplets/listdroplets`)
+        .get(`${process.env.VUE_APP_API_URL}/droplets`, { headers: {
+            Authorization: `Bearer ${process.env.VUE_APP_DO_API_KEY}`
+        }})
         .then(response => {
-            this.dropletList = response.data      
-            console.log("Droplet list below")
-            console.log(this.dropletList)   
+            this.dropletList = response.data.droplets
         })
         .catch(error => {
             console.log(error)
@@ -52,7 +52,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>

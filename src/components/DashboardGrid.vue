@@ -1,11 +1,10 @@
 <template>
       <div class="card-grid">
         <DashboardCard
-          class="dashboard-card"
+          class="dashboard-card ui cards"
           v-for="card in cards"
           :key="card.id"
           :title="card.cardTitle"
-          :header="card.cardHeader"
           :description="card.cardDescription"
           :destination="card.destination"
         />

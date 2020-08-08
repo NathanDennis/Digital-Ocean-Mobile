@@ -37,7 +37,10 @@ export default {
   },
   mounted(){
       axios
-        .get(`${process.env.VUE_APP_LOCAL_DEV_SERVER_IP}/billing/history`)
+        .get(`${process.env.VUE_APP_API_URL}/customers/my/billing_history`, { headers: {
+            Authorization: `Bearer ${process.env.VUE_APP_DO_API_KEY}`
+
+        }})
         .then(response => {
             this.billingHistory = response.data.billing_history
         })
@@ -47,7 +50,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
