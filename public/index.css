@@ -2,3 +2,22 @@ ion-footer {
     position: absolute;
     bottom: 0;
 }
+
+.account-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.account-details-container h4 {
+    text-align: center;
+}
+
+.account-details-card {
+    max-width: 15em;
+    margin: 1em;
+}
+
+.account-status {
+    text-transform: capitalize;
+}

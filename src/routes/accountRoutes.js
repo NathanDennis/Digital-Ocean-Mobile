@@ -1,4 +1,4 @@
-import Profile from '../pages/Account/Profile'
+// import Profile from '../pages/Account/Profile'
 import Account from '../pages/Account/Account'
 
 let accountRoutes = [
@@ -7,11 +7,11 @@ let accountRoutes = [
         name: 'Account',
         component: Account
     },
-    {
-        path: '/account/profile',
-        name: 'profile',
-        component: Profile
-    },
+    // {
+    //     path: '/account/profile',
+    //     name: 'profile',
+    //     component: Profile
+    // },
 ]
 
 export default accountRoutes

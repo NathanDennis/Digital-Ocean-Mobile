@@ -1,6 +1,6 @@
 <template>
     <ion-item>
-        <ion-button @click="openModal">{{dropletName}}</ion-button>
+        {{ dropletName }}<ion-button @click="openModal" slot="end">View</ion-button>
     </ion-item>
 </template>
 
