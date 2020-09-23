@@ -21,8 +21,11 @@ func viperSetup() {
 	}
 }
 
-func enableCors(w *http.ResponseWriter) {
-	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+func enableCors(w http.ResponseWriter) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Headers", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "*")
+
 }
 
 func main() {
@@ -36,20 +39,13 @@ func main() {
 	client := godo.NewFromToken(pat)
 	ctx := context.TODO()
 
-	// ################
-	// #### ROUTES ####
-	// ################
-
-	// ################
-	//  ACCOUNT ROUTES
-	// ################
-
 	handler := http.NewServeMux()
+
 	// ### Account Route ###
-	handler.HandleFunc("/account/profile", func(w http.ResponseWriter, r *http.Request) {
+	handler.HandleFunc("/account/details", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Authorization", authHeader)
-		enableCors(&w)
+		enableCors(w)
 
 		account, _, err := client.Account.Get(ctx)
 		if err != nil {
@@ -59,15 +55,11 @@ func main() {
 		json.NewEncoder(w).Encode(account)
 	})
 
-	// ################
-	//  DROPLET ROUTES
-	// ################
-
-	// ### List Droplets Route ###
-	handler.HandleFunc("/droplets/listdroplets", func(w http.ResponseWriter, r *http.Request) {
+	// List Droplets Route
+	handler.HandleFunc("/droplets/list", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Authorization", authHeader)
-		enableCors(&w)
+		enableCors(w)
 
 		opt := &godo.ListOptions{
 			Page:    1,
@@ -83,15 +75,11 @@ func main() {
 		json.NewEncoder(w).Encode(droplets)
 	})
 
-	// ################
-	//  BILLING ROUTES
-	// ################
-
-	// ### Balance Route ###
+	// Balance Route
 	handler.HandleFunc("/billing/balance", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Authorization", authHeader)
-		enableCors(&w)
+		enableCors(w)
 
 		balance, _, err := client.Balance.Get(ctx)
 
@@ -101,11 +89,12 @@ func main() {
 
 		json.NewEncoder(w).Encode(balance)
 	})
-	// ### Billing History Route ###
+
+	// Billing History Route
 	handler.HandleFunc("/billing/history", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Authorization", authHeader)
-		enableCors(&w)
+		enableCors(w)
 
 		opt := &godo.ListOptions{
 			Page:    1,
@@ -121,10 +110,9 @@ func main() {
 		json.NewEncoder(w).Encode(billingHistory)
 	})
 
-	// ### Listen And Serve
 	fmt.Println("Server starting")
 	s := &http.Server{
-		Addr:         ":3000",
+		Addr:         ":1412",
 		Handler:      handler,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,

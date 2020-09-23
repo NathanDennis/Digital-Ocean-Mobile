@@ -1,15 +1,8 @@
 <template>
-	<!-- <AccountDetailsButton 
-			modalName="Account"
-			:email=account.email
-			:dropletLimit=account.droplet_limit
-			:accountStatus=account.status
-		/>
-		<AccountDetailsButton modalName="Balance" /> -->
 	<div v-if="account.email">
 		<ion-list>
 			<ion-item>{{ account.email }}</ion-item>
-			<ion-item v-if="account.email_verified">Email verified</ion-item>
+			<ion-item v-if="account.email_verified">Email Verified</ion-item>
 			<ion-item>Droplet Limit: {{ account.droplet_limit }}</ion-item>
 			<ion-item>Account Status: {{ account.status }}</ion-item>
 		</ion-list>
@@ -21,11 +14,9 @@
 
 <script>
 import axios from "axios"
-// import AccountDetailsButton from '../../components/account/AccountDetailsButton'
 
 export default {
 	name: "AccountDetails",
-	// components: { AccountDetailsButton },
 	data() {
 		return {
 			account: {},
@@ -33,13 +24,13 @@ export default {
 	},
 	beforeMount() {
 		axios
-			.get(`${process.env.VUE_APP_API_URL}/account`, {
+			.get(`${process.env.VUE_APP_API_URL}/account/details`, {
 				headers: {
 					Authorization: `Bearer ${process.env.VUE_APP_DO_API_KEY}`,
 				},
 			})
 			.then((response) => {
-				this.account = response.data.account
+				this.account = response.data
 			})
 			.catch((error) => console.log(error))
 	},

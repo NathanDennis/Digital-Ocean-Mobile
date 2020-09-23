@@ -10,7 +10,7 @@
       <ion-list class="ion-padding">
         <ion-item>Description: {{description}}</ion-item>
         <ion-item>Date: {{new Date(date).toLocaleDateString()}}</ion-item>
-        <ion-item>Amount: {{amount}}</ion-item>
+        <ion-item>Amount: ${{amount}}</ion-item>
         <ion-item>Type: {{type}}</ion-item>
         <ion-item v-if="type='Invoice'">Invoice UUID: {{invoice_uuid}}</ion-item>
       </ion-list>

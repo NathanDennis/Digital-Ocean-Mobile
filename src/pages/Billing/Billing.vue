@@ -6,7 +6,6 @@
 			</ion-toolbar>
 		</ion-header>
 		<ion-content padding>
-			<h1>BILLING</h1>
 			<DashboardGrid :cards="this.cards" />
 		</ion-content>
 	</ion-page>

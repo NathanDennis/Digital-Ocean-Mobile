@@ -12,20 +12,10 @@
 			<ion-list>
 				<h3
 					v-if="
-						dropletList.length === 0 ||
-							!dropletList ||
-							!dropletList.meta.total
+						!dropletList 
 					"
 				>
 					Loading your droplets...
-				</h3>
-				<h3 v-else-if="dropletList.length > 0">
-					You currently have
-					{{
-						dropletList.meta.total > 1
-							? `${dropletList.meta.total} droplets`
-							: `${dropletList.meta.total} droplet`
-					}}
 				</h3>
 				<hr />
 				<DropletListItem
@@ -43,8 +33,8 @@
 </template>
 
 <script>
-import axios from "axios"
 import DropletListItem from "../../components/droplets/DropletListItem"
+import getAPIData from '../../componentMethods/getAPIData'
 
 export default {
 	name: "DropletList",
@@ -53,31 +43,17 @@ export default {
 	},
 	data() {
 		return {
-			dropletList: [],
+			dropletList: []
 		}
 	},
-	mounted() {
-        this.getAPIData()
+	beforeMount() {
+		getAPIData('droplets/list')
+			.then(response => this.dropletList = response.data)
+			.catch(error => console.error(error))
     },
 	methods: {
-		async getAPIData() {
-			await axios
-				.get(`${process.env.VUE_APP_API_URL}/droplets`, {
-					headers: {
-						Authorization: `Bearer ${process.env.VUE_APP_DO_API_KEY}`,
-					},
-				})
-				.then((response) => {
-					console.log(response.data)
-					this.dropletList = response.data.droplets
-					this.dropletList.meta = response.data.meta
-				})
-				.catch((error) => {
-					console.log(error)
-				})
-		},
 		doRefresh(event) {
-            this.getAPIData().then(() => {
+            getAPIData('droplets/list').then(() => {
                 console.log('Refresh complete')
                 event.target.complete()
             })

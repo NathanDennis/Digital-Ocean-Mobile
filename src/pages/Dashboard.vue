@@ -6,7 +6,6 @@
       </ion-toolbar>
     </ion-header>
     <ion-content padding>
-        <h1> Page title </h1>
         <DashboardGrid 
             :cards=this.cards
         />
@@ -29,7 +28,7 @@ export default {
                   id: 1,
                   cardTitle: 'Account',
                   cardHeader: 'Account Tab',
-                  cardDescription: 'Profile, Team Management and more',
+                  cardDescription: 'Your profile',
                   destination: '/#/account'
               },
               {

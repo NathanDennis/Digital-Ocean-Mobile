@@ -6,7 +6,6 @@
       </ion-toolbar>
     </ion-header>
     <ion-content padding>
-        <h1> BILLING HISTORY </h1>
         <BillingHistoryListItem 
             v-for="bill in billingHistory"
             :key=bill.date
@@ -37,7 +36,7 @@ export default {
   },
   mounted(){
       axios
-        .get(`${process.env.VUE_APP_API_URL}/customers/my/billing_history`, { headers: {
+        .get(`${process.env.VUE_APP_API_URL}/billing/history`, { headers: {
             Authorization: `Bearer ${process.env.VUE_APP_DO_API_KEY}`
 
         }})
