@@ -1,10 +1,10 @@
 <template>
   <ion-page>
-    <ion-header>
+    <!-- <ion-header>
       <ion-toolbar color="primary">
         <ion-title>{{title}}</ion-title>
       </ion-toolbar>
-    </ion-header>
+    </ion-header> -->
     <ion-content padding>
         <DashboardGrid 
             :cards=this.cards

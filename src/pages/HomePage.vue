@@ -1,10 +1,5 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Home</ion-title>
-      </ion-toolbar>
-    </ion-header>
     <ion-content padding>
         <h2>Hello Nathan</h2>
         <ion-button href="#">Log In</ion-button>

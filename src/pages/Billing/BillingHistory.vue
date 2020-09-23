@@ -1,10 +1,5 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Billing: History</ion-title>
-      </ion-toolbar>
-    </ion-header>
     <ion-content padding>
         <BillingHistoryListItem 
             v-for="bill in billingHistory"

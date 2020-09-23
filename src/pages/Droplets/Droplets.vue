@@ -1,10 +1,5 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Droplets</ion-title>
-      </ion-toolbar>
-    </ion-header>
     <ion-content padding>
         <DashboardGrid 
             :cards=this.cards 
