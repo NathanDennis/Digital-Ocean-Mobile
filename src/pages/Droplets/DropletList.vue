@@ -21,8 +21,8 @@
 </template>
 
 <script>
+import axios from 'axios'
 import DropletListItem from '../../components/droplets/DropletListItem'
-import getAPIData from '../../componentMethods/getAPIData'
 
 export default {
     name: 'DropletList',
@@ -34,11 +34,15 @@ export default {
             dropletList: [],
         }
     },
-    beforeMount() {
-		console.log(this)
-        getAPIData('droplets/list')
-            .then((response) => (this.dropletList = response.data))
-            .catch((error) => console.error(error))
+    mounted() {
+		axios.get('https://api.digitalocean.com/v2/droplets', {
+            headers: {
+                Authorization: `Bearer ${process.env.VUE_APP_DO_API_KEY}`,
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => this.dropletList = response.data.droplets)
+        .catch(err => console.error(err))
     }
 }
 </script>

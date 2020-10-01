@@ -9,20 +9,6 @@
 	<div v-else>
 		<h3>Fetching account details...</h3>
 	</div>
-
-    <!-- <div>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>{{ title }}</ion-title>
-                <ion-button @click="dismiss" slot="end">Close</ion-button>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content>
-            <ion-list class="ion-padding">
-                <ion-item>Email: {{ email }}</ion-item>
-            </ion-list>
-        </ion-content>
-    </div> -->
 </template>
 
 <script>

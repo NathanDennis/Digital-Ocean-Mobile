@@ -4,11 +4,6 @@
             <ion-icon :src="i.speedometer"></ion-icon>
             <ion-label>Dashboard</ion-label>
         </ion-tab-button>
-<!-- 
-        <ion-tab-button name="Support" href="/#/support">
-            <ion-icon :src="i.build"></ion-icon>
-            <ion-label>Support</ion-label>
-        </ion-tab-button> -->
     </ion-tab-bar>
 </template>
 

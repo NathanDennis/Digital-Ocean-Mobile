@@ -1,27 +1,24 @@
 <template>
-  <ion-page>
-    <ion-content padding>
-        <h2>Hello Nathan</h2>
-        <ion-button href="#">Log In</ion-button>
-        <ion-button href="/#/dashboard">Dashboard</ion-button>
-    </ion-content>
-  </ion-page>
+    <ion-page>
+        <ion-content padding>
+            <h2>Hello Nathan</h2>
+            <ion-button href="#">Log In</ion-button>
+            <ion-button href="/#/dashboard">Dashboard</ion-button>
+        </ion-content>
+    </ion-page>
 </template>
 
 <script>
-
 export default {
-  name: "HomePage",
-  data() {
-      return {
-        APIKey: process.env.VUE_APP_DO_API_KEY,
-        accountName: 'waiting'
-      }
-  }
+    name: 'HomePage',
+    data() {
+        return {
+            APIKey: process.env.VUE_APP_DO_API_KEY,
+            accountName: 'waiting',
+        }
+    },
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body {
     height: 100%;

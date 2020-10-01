@@ -26,7 +26,7 @@ export default {
     name: 'Account',
     components: {
         AccountDetails,
-        BalanceDetails
-    }
+        BalanceDetails,
+    },
 }
 </script>
