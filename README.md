@@ -14,6 +14,9 @@ Currently using Ionic Framework and VueJS 2
 
 From there you can run `npx cap open android` to open the project in Android Studio
 
+## NOTE
+The home page is hard coded and the login button doesn't work yet. I'll be working on adding OAuth to the app via the login button, to remove the need for the API key.
+
 
 ### For iOS
 You can run `npx cap add ios` to build an iOS folder, and then `npx cap open ios` on Mac to open XCode.
