@@ -1,7 +1,7 @@
 <template>
     <ion-page>
         <ion-content padding>
-            <h2>Hello Nathan</h2>
+            <h2>Hello</h2>
             <ion-button href="#">Log In</ion-button>
             <ion-button href="/#/dashboard">Dashboard</ion-button>
         </ion-content>
