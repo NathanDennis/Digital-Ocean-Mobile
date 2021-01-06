@@ -13,7 +13,7 @@
     "@capacitor/core": "^2.1.0",
     "@ionic/core": "^5.1.0",
     "@ionic/vue": "0.0.9",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
